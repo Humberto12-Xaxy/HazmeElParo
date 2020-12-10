@@ -103,7 +103,8 @@ const realizado = (id) => {
     .then(res => res.json())
         Swal.fire({
             icon: 'success',
-            title: 'Paro completado'
+            title: 'Paro completado', 
+            background: '#000'
         }).then(res => window.location.reload())
 
         
