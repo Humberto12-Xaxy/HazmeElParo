@@ -1,0 +1,109 @@
+body {
+    padding: 50px;
+    background: #0B121C; 
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+.logo{
+    position:absolute;
+    left: 10%;
+    top: 25%;
+    width: 120px;
+  }
+
+.box{
+    position: absolute;
+    margin: auto;
+    height: 500px;
+    width: 900px;
+    background-color:#785823;
+}
+
+.box-user{
+    position: absolute;
+    left: 280px;
+    width: 619.5px;
+    height: 500px;
+    background-color:#000000;
+}
+
+.input-container{
+    position:relative;
+    top: 80px;
+    left: 100px;
+	margin-bottom:35px;
+}
+
+.input-container label{
+	position:absolute;
+	top:0px;
+	left:0px;
+	font-size:16px;
+	color:#fff;	
+  pointer-events: none;
+	transition: all 0.1s ease-in-out;
+}
+
+.input-container input{ 
+    border:0;
+    border-bottom:1px solid #555;  
+    background:transparent;
+    width:60%;
+    padding:8px 0 5px 0;
+    font-size:16px;
+    color:#fff;
+}
+  
+.input-container input:focus{ 
+    border:none;	
+    outline:none;
+    border-bottom:1px solid #B90403;	
+}
+  
+.input-container input:focus ~ label,
+.input-container input:valid ~ label{
+      top:-12px;
+      font-size:12px;
+}
+
+.button{
+    left: 40%;
+      color:#fff;
+      background-color:#801407;
+      outline: none;
+    border: 0;
+    color: #fff;
+      padding:10px 20px;
+      text-transform:uppercase;
+      margin-top:20%;
+      border-radius:10px;
+      cursor:pointer;
+      position:relative;
+}
+  
+.button:hover {
+    background-color:#BB0305;
+    color: #fff !important;
+    transition: all 0.3s ease;
+}
+
+.title{
+    font-size: 30px;
+    position:absolute;
+    color: #fff;
+    margin-left: 2%;
+    margin-top: 28%;
+  }
+
+.text{
+    color: #ffffff;
+    position:absolute;
+    margin-left: 7%;
+    margin-top: 33%;
+}
