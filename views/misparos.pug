@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Mis paros
+        link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css', integrity='sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z', crossorigin='anonymous')
+        link(rel="stylesheet", href='/stylesheets/styleHome.css')
+    
+    body
+        div.head
+            img(src="/images/logo.png", alt="").logo
+            ul.nav.justify-content-end
+                li.nav-item
+                    a.nav-link.active(href="/home") Home
+                li.nav-item
+                    a.nav-link.active(href="/pendientes") Paros pendientes
+                li.nav-item
+                    a.nav-link.active(href="/misparos") Mis Paros 
+                li.nav-item
+                    a.nav-link.active(id='modal', href="#") Pedir paro
+                li.nav-item
+                    a.nav-link(href="/logout") Cerrar sesión
+        div(class='container p-4')
+            div.row
+                - if(data)
+                    each values in data
+                        div(class='col-md-3')
+                            div(class='card text-center text-white bg-dark')
+                                div(class='card-body')
+                                    h1(class='card-title text-uppercase' id='nombre')=values.nombre
+                                    label(class = 'm-2') descripción: #{values.descripcion}
+                                    label(class = 'm-2')=values.tiempo        
+                                    a(href=`/misparos/delete/${values.id}` class='btn btn-danger' id='update') Eliminar
+                                    a(href=`#` class='btn btn-primary' onclick=`modal2(${values.id})`) Editar
+
+    script(src='https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.all.min.js')
+    script(src='/javascripts/home.js')    

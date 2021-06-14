@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href='/stylesheets/styleRegister.css')
+        title Registro
+    body
+        div.box
+            div.box-user
+                form(action="/registro", method="post")
+                    div.input-container
+                        input(type="text", name="nombre", required="")
+                        label Nombre 
+                    div.input-container
+                        input(type="text", name="apellido", required="")
+                        label Apellido
+                    div.input-container
+                        input(type="text", name="usuario", required="")
+                        label Nombre de usuario
+                    div.input-container
+                        input(type="password", name="password", required="")
+                        label Contraseña 
+                    input(type="submit", value="Registrarse").button
+            img(src="/images/logo.png", alt="").logo
+            h1.title HAZME EL PARO
+            label.text AYUDA COLABORATIVA

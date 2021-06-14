@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    div.box
+        h1 HAZME EL PARO
+        label AYUDA COLABORATIVA
+        Label.welcome Bienvenido
+        form(action="/login", method="post")
+            img(src="/images/logo.png", alt="").logo
+            div.input-container
+                input(type="text", name="username", required="")
+                label Nombre de usuario
+            div.input-container
+                input(type="password", name="password", required="")
+                label Contraseña 
+            input(type="submit", value="Ingresar").button
+        form(action="/registro" method="get")
+            input(type="submit", value= "Crear nuevo").new
